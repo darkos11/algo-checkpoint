@@ -1,0 +1,37 @@
+ALGORITHM conteur-phrase
+VAR
+    nm:=INTEGER
+    nc:=INTEGER
+    nv:=INTEGER
+    phrase:=STRING
+BEGIN
+  nc:= 0 ;
+  nm:= 1 ;
+  nv:= 0;
+
+  write("type the sentence")
+
+  read(phrase)
+  REPEAT
+    IF (phrase[nc]=" ") THEN
+       nm:=nm+1 ;
+      END_IF
+
+  IF (phrase[nc] in ["a","e","u","i","o","y"]) THEN
+  nv:= nv +1 ;
+  END_IF
+  nc := nc+1 ;
+
+UNTIL (phrase[nc]=".")
+
+write( "le nombre de caractere est ",nc+1 )
+
+write (" le nombre de mot est ",nm)
+
+write (" le nombre de voyelle est ",nv)
+
+END
+
+
+  UNTIL (condition)
+END
